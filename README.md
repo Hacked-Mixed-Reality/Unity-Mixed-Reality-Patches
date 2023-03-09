@@ -30,15 +30,15 @@ So here's a quick tutorial on how to use dnSpy to patch a DLL:
 
 ### Setting up your workspace
 dnSpy opens any dependencies it comes across so you will likely want to start by closing all the previously opened assemblies from any previous session.
-![](01-close-all.png)
+![](images/01-close-all.png)
 
 ### Opening an Assembly
 Simply drag and drop the assembly you want to open in to the left hand pane of dnSpy (the Assembly Explorer pane).
-![](02-load-assembly.png)
+![](images/02-load-assembly.png)
 
 ### Find the code you want to patch
 Expand the tree nodes from your loaded assembly to get to the class or method you want to patch.
-![](03-expand-tree.png)
+![](images/03-expand-tree.png)
 
 Note the final one highlighted there is the Root Namespace: `{} -`. I've found that is often where much of the codebase lives, so if you see `{} -` in the path for the patching instructions, this is what it is referencing.
 
@@ -47,11 +47,11 @@ Once you've found the code you want to change (most often within a method) you c
 ![How to open the Edit Method window](04-edit-method.png)
 
 This pops open a new window where you can edit this code. Once you are done, click Compile at the bottom to check the the code compiles and save it to memory. 
-![](05-edit-code-window.png)
+![](images/05-edit-code-window.png)
 
 ### Save the Changes
 To commit your changes back to the DLL you need go to File and Save Module
-![](06-save-module-menu.png)
+![](images/06-save-module-menu.png)
 
 This pops open a new window where you can confirm the path and other options. If you do not change the path you will overwrite your existing DLL file. Please make sure you take backups of the original. Clicking OK saves the DLL.
-![](07-save-module-form.png)
+![](images/07-save-module-form.png)
